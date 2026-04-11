@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#acedff",
+                        "surface-dim": "#d8dadc",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed": "#07006c",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-container": "#006172",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c7c4d7",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-error-container": "#93000a",
+                        "outline": "#767586",
+                        "background": "#f7f9fb",
+                        "on-tertiary-fixed-variant": "#703700",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "surface-tint": "#494bd6",
+                        "tertiary-fixed": "#ffdcc5",
+                        "surface-variant": "#e0e3e5",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb783",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary": "#00687a",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary": "#904900",
+                        "primary": "#4648d4",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#e1e0ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-fixed": "#301400",
+                        "inverse-primary": "#c0c1ff",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "secondary-container": "#57dffe",
+                        "on-surface-variant": "#464554",
+                        "primary-container": "#6063ee",
+                        "error-container": "#ffdad6",
+                        "surface": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-container": "#b55d00",
+                        "surface-container": "#eceef0",
+                        "on-secondary-fixed": "#001f26",
+                        "on-background": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; color: #191c1e; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-header { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(24px); }
+        .hero-gradient { background: linear-gradient(135deg, #4648d4 0%, #57dffe 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 glass-header shadow-[0px_12px_32px_rgba(25,28,30,0.04)]">
+<nav class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-2">
+<img alt="Kayazta Logo" class="h-8 w-auto" data-alt="modern minimalist tech company logo with geometric shapes in indigo and cyan tones on transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFuyHdyqwny5bjSqyDYZRS6-TVBo2Q_s7tYINnerE6zZ7Hb1uW8LF-FcirYioWZzcmSFkiYlDZDZIFTaUVNcGH7N1LJk-PgvHhC_kKLesZu89Cn7j3FzM2uYZA6dbp7fNNYI0fIFjNcl2PUssfcdKB7Vx6nCK6b8OEWBBZOCxgtd8cnTT8HjM2PgOzcfkTX2OTYpoC-Qzdgd8YeW2DIGHl7nNtbT7DII_-Qky8IzHz-N4gsGuoC0MBe3vN6ZxcCXPLF9o16q0i06uw"/>
+<span class="text-xl font-bold tracking-tighter text-primary">Kayazta</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-indigo-700 font-semibold border-b-2 border-indigo-600 px-1 py-1" href="#">Layanan</a>
+<a class="text-slate-600 font-medium hover:text-indigo-500 transition-colors duration-300" href="#">Tentang Kami</a>
+<a class="text-slate-600 font-medium hover:text-indigo-500 transition-colors duration-300" href="#">Portofolio</a>
+<a class="text-slate-600 font-medium hover:text-indigo-500 transition-colors duration-300" href="#">Kontak</a>
+</div>
+<button class="hero-gradient text-on-primary px-6 py-2.5 rounded-lg font-semibold active:scale-95 transition-transform">
+                Hubungi Kami
+            </button>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="px-8 py-20 max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold tracking-widest uppercase">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+                        Digital Transformation Partner
+                    </div>
+<h1 class="text-6xl font-extrabold tracking-tight leading-[1.1] text-on-surface">
+                        Membangun Masa Depan <span class="text-primary">Teknologi</span> Indonesia.
+                    </h1>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                        Kami membantu bisnis Anda berkembang melalui solusi software kustom, inkubasi startup, dan transformasi digital yang berfokus pada hasil nyata.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="hero-gradient text-on-primary px-8 py-4 rounded-lg font-bold text-lg shadow-xl shadow-primary/20 active:scale-95 transition-all">
+                            Mulai Proyek Anda
+                        </button>
+<button class="bg-surface-container-lowest text-primary px-8 py-4 rounded-lg font-bold text-lg border-2 border-primary-fixed hover:bg-primary-fixed/30 transition-all">
+                            Lihat Portofolio
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="high-tech office environment with developers working on multiple monitors showing clean code and architectural diagrams, bright airy atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAlwQ2M8p-OEHtn83tPiYDN34Xz9sZ_FAPNdb_qtRdQVqwxU4EXULwJaJNSNS2CwT4wUCc5iPbWfo8dPflVDpelAAeAL4WNFWxgfU7bh17XHcjl66r4RPCmYeru2iL27wMDM-d6f2laHtpZTMnq0p8TfVLCI_2g6PpEqEylrfnrf7vRUPF3_r_ZvD-9lbHT2M-S9obJXNN2YRTrTMz_VROmz_RbT7c9YvLAd2ZtEX1VgbWoBAb91KAfES-Wl8l-4LtBVo-N-hT8i3z"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl shadow-xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">trending_up</span>
+</div>
+<div>
+<div class="text-2xl font-bold text-on-surface">150+</div>
+<div class="text-sm text-on-surface-variant">Proyek Berhasil</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Incubator Section -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-4">Kayazta Incubator</h2>
+<h3 class="text-4xl font-bold text-on-surface leading-tight">Kami Tidak Hanya Membangun Kode, Kami Membangun Bisnis.</h3>
+</div>
+<p class="text-on-surface-variant text-lg max-w-md">
+                        Program inkubasi eksklusif untuk startup tahap awal yang ingin melakukan validasi pasar dan skalabilitas produk.
+                    </p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-xl space-y-4 hover:shadow-lg transition-shadow">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">lightbulb</span>
+</div>
+<h4 class="text-xl font-bold">Ideasi &amp; Strategi</h4>
+<p class="text-on-surface-variant">Mempertajam konsep bisnis Anda dengan riset pasar yang mendalam.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl space-y-4 hover:shadow-lg transition-shadow">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">architecture</span>
+</div>
+<h4 class="text-xl font-bold">Pengembangan MVP</h4>
+<p class="text-on-surface-variant">Membangun produk minimum yang fungsional dalam waktu 12 minggu.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl space-y-4 hover:shadow-lg transition-shadow">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">groups</span>
+</div>
+<h4 class="text-xl font-bold">Akses Mentor</h4>
+<p class="text-on-surface-variant">Bimbingan langsung dari praktisi industri dan investor berpengalaman.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="text-4xl font-black text-on-surface mb-6">Layanan Komprehensif Kami</h2>
+<p class="text-lg text-on-surface-variant">Solusi teknologi end-to-end yang dirancang untuk mempercepat pertumbuhan bisnis Anda di era digital.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service Card 1 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl border border-transparent hover:border-primary-fixed transition-all">
+<div class="w-14 h-14 bg-surface-container-low rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">devices</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Custom Software</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Pengembangan aplikasi web dan mobile yang disesuaikan dengan kebutuhan spesifik alur kerja bisnis Anda.</p>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl border border-transparent hover:border-primary-fixed transition-all">
+<div class="w-14 h-14 bg-surface-container-low rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">cloud_done</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Cloud Solutions</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Migrasi dan optimasi infrastruktur cloud untuk memastikan ketersediaan tinggi dan skalabilitas otomatis.</p>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl border border-transparent hover:border-primary-fixed transition-all">
+<div class="w-14 h-14 bg-surface-container-low rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">security</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Cyber Security</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Perlindungan data menyeluruh dengan audit keamanan berkala dan implementasi standar protokol keamanan global.</p>
+</div>
+<!-- Service Card 4 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl border border-transparent hover:border-primary-fixed transition-all">
+<div class="w-14 h-14 bg-surface-container-low rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">monitoring</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Data Analytics</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Mengubah data mentah menjadi wawasan bisnis yang dapat ditindaklanjuti melalui dasbor visual interaktif.</p>
+</div>
+</div>
+</section>
+<!-- How It Works (Asymmetric Layout) -->
+<section class="bg-surface-container-high py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid lg:grid-cols-5 gap-12">
+<div class="lg:col-span-2">
+<h2 class="text-5xl font-black text-on-surface mb-8">Bagaimana Kami Bekerja</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed">Kami mengikuti metodologi Agile yang transparan, memastikan setiap tahap pengembangan selaras dengan tujuan bisnis Anda.</p>
+<div class="mt-12 space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center font-bold text-primary">01</div>
+<div>
+<h5 class="text-xl font-bold mb-2">Konsultasi Gratis</h5>
+<p class="text-on-surface-variant">Diskusi mendalam untuk memahami tantangan dan peluang bisnis Anda.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center font-bold text-primary">02</div>
+<div>
+<h5 class="text-xl font-bold mb-2">Perencanaan Agile</h5>
+<p class="text-on-surface-variant">Penyusunan roadmap teknis dan desain UI/UX yang berpusat pada pengguna.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3">
+<div class="relative bg-surface-container-lowest rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-[500px] object-cover" data-alt="team of diverse professionals collaborating on a digital interface design, high resolution tablet screens and creative workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArCyPHVDr8ygiHvtHOvsoYyfGzqXXx7dAlJ8OVwfdd-IvzrECHYg8rxuChkHufachfOvumF1k2wAfimhdHAZPVZqVgPVCoeJpG7fC_vATu0GeG3kEiZAemSlm2SCziYh-Lu0I8RD8RF946I1b8sldQuysY6Em-GyfHe4DPkudLBy6PyNxonqGlZ2htQeNOBC1ppE8tid-ISNXfZiIPCQSLGPgv-wRtUdboQRfUYmRc2AvmfxF4U9o6wRHM72DTUFqsLPLZpuEh-f71"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-12">
+<div class="text-white">
+<p class="text-lg font-medium italic">"Proses yang sangat terstruktur membuat kami merasa aman dan selalu mendapatkan update setiap minggu."</p>
+<p class="mt-4 font-bold">Santi Rahmawati, CEO TechFlow</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof (Alchemist Fragrance) -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="bg-surface-container-lowest rounded-3xl p-12 lg:p-20 flex flex-col lg:flex-row items-center gap-16 shadow-sm">
+<div class="w-full lg:w-1/2">
+<img class="rounded-2xl w-full aspect-video object-cover" data-alt="luxury perfume bottle on a minimalist pedestal with dramatic lighting, representing premium brand Alchemist Fragrance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHkSbFe0zwfE4Hu4387HEBqafBCeejGILbHv8O9JH6m2d_hjKWEw32pgyG_iRQU466Czh6e0N-tDGPNcxjSZrCkRgrsNWLprdhitAijSWDJlD40MQtEravY31bpMZp9St_T5wfcV-zIs_rA1efgqDK7hxl8tVs_13J2kp_vOZRGsxRMAjT-u9w1T_ekQwScZuKF1lhnhm8GFYddEiDeQ3xEsZ1NsAYbQjLC5CoBR7pKrNbVeeMKoPpyjm1LbzpvNi_0iBbJRu80Im2"/>
+</div>
+<div class="w-full lg:w-1/2 space-y-6">
+<div class="text-primary font-bold tracking-widest uppercase">Case Study: Alchemist Fragrance</div>
+<h3 class="text-4xl font-black text-on-surface">Digitalisasi Pengalaman Aroma.</h3>
+<p class="text-lg text-on-surface-variant italic">"Kayazta membantu kami mengubah cara pelanggan berinteraksi dengan produk Alchemist secara online. Solusi e-commerce kustom mereka meningkatkan konversi kami hingga 45% dalam kuartal pertama."</p>
+<div class="pt-4 border-t border-surface-variant">
+<p class="font-bold text-xl">Nanda Jamil</p>
+<p class="text-on-surface-variant">Founder, Alchemist Fragrance</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us (Bento Grid) -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="text-4xl font-black text-center mb-16">Mengapa Memilih Kayazta?</h2>
+<div class="grid md:grid-cols-3 grid-rows-2 gap-6 h-auto md:h-[600px]">
+<div class="md:col-span-2 bg-primary-container text-on-primary-container p-10 rounded-2xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-5xl mb-6">workspace_premium</span>
+<h4 class="text-3xl font-bold mb-4">Kualitas Standar Global</h4>
+<p class="text-lg opacity-90">Kami menerapkan standar engineering terbaik kelas dunia untuk setiap baris kode yang kami tulis.</p>
+</div>
+<div class="flex -space-x-4 mt-8">
+<div class="w-12 h-12 rounded-full border-4 border-primary-container bg-slate-200"></div>
+<div class="w-12 h-12 rounded-full border-4 border-primary-container bg-slate-300"></div>
+<div class="w-12 h-12 rounded-full border-4 border-primary-container bg-slate-400"></div>
+<div class="w-12 h-12 rounded-full border-4 border-primary-container bg-primary flex items-center justify-center text-xs font-bold">+50 Ahli</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl flex flex-col justify-center border border-surface-variant/20 shadow-sm">
+<h4 class="text-5xl font-black text-primary mb-2">99.9%</h4>
+<p class="text-xl font-bold text-on-surface">Uptime SLA</p>
+<p class="text-on-surface-variant mt-4">Jaminan stabilitas sistem untuk kelancaran operasional bisnis Anda tanpa gangguan.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl flex flex-col justify-center border border-surface-variant/20 shadow-sm">
+<h4 class="text-xl font-bold text-on-surface mb-2">Iterasi Cepat</h4>
+<p class="text-on-surface-variant">Proses sprint 2 mingguan untuk memastikan feedback Anda diimplementasikan dengan segera.</p>
+</div>
+<div class="md:col-span-2 bg-secondary-container text-on-secondary-container p-10 rounded-2xl flex items-center justify-between">
+<div class="max-w-md">
+<h4 class="text-2xl font-bold mb-2">Fokus Pada Pertumbuhan</h4>
+<p class="opacity-90">Kami bukan sekadar vendor, kami adalah mitra strategis yang peduli pada ROI bisnis Anda.</p>
+</div>
+<span class="material-symbols-outlined text-7xl opacity-30">query_stats</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="hero-gradient rounded-3xl p-12 md:p-20 text-center text-on-primary relative overflow-hidden shadow-2xl">
+<div class="relative z-10">
+<h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">Siap Untuk Mewujudkan<br/>Ide Besar Anda?</h2>
+<p class="text-xl opacity-90 mb-12 max-w-2xl mx-auto">Mari berdiskusi bagaimana teknologi kami dapat membantu bisnis Anda mencapai level berikutnya.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-surface-container-lowest text-primary px-10 py-5 rounded-xl font-black text-xl hover:scale-105 transition-transform">
+                            Jadwalkan Konsultasi Gratis
+                        </button>
+<button class="bg-white/20 backdrop-blur-md text-white border border-white/40 px-10 py-5 rounded-xl font-black text-xl hover:bg-white/30 transition-all">
+                            Lihat Paket Harga
+                        </button>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-400/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low mt-12">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-lg font-black text-slate-900">Kayazta Tech Service</div>
+<p class="text-sm text-slate-500 max-w-xs">Solusi teknologi modern untuk masa depan digital Indonesia yang lebih baik.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 text-sm font-medium">
+<a class="text-slate-500 hover:underline hover:text-indigo-600 transition-opacity opacity-80 hover:opacity-100" href="#">Layanan</a>
+<a class="text-slate-500 hover:underline hover:text-indigo-600 transition-opacity opacity-80 hover:opacity-100" href="#">Tentang Kami</a>
+<a class="text-slate-500 hover:underline hover:text-indigo-600 transition-opacity opacity-80 hover:opacity-100" href="#">Portofolio</a>
+<a class="text-slate-500 hover:underline hover:text-indigo-600 transition-opacity opacity-80 hover:opacity-100" href="#">Kontak</a>
+</div>
+<div class="text-sm text-slate-500">
+                © 2024 Kayazta Tech Service. Hak Cipta Dilindungi.
+            </div>
+</div>
+</footer>
+</body></html>
