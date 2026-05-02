@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Kayazta | Digital Transformation Partner & Startup Incubator</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="description"
         content="Kayazta helps businesses grow through custom software solutions, startup incubation, and digital transformation in Indonesia." />
     <meta property="og:title" content="Kayazta | Digital Transformation Partner" />
@@ -126,7 +127,7 @@
                 <a class="text-slate-600 font-medium hover:text-indigo-500 transition-colors duration-300"
                     href="inkubasi.html">Inkubasi</a>
             </div>
-            <a href="mailto:contactus@kayazta.id?subject=Hubungi%20Kayazta"
+            <a href="mailto:contact-us@kayazta.id?subject=Hubungi%20Kayazta"
                 class="hero-gradient text-on-primary px-6 py-2.5 rounded-lg font-semibold active:scale-95 transition-transform">
                 Hubungi Kami
             </a>
@@ -146,10 +147,11 @@
                         Membangun Masa Depan <span class="text-primary">Teknologi</span> Indonesia.
                     </h1>
                     <p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
-                        Kami membantu bisnis Anda berkembang melalui solusi software kustom,transformasi digital dan inkubasi startup yang berfokus pada hasil nyata.
+                        Kami membantu bisnis Anda berkembang melalui solusi software kustom,transformasi digital dan
+                        inkubasi startup yang berfokus pada hasil nyata.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="mailto:contactus@kayazta.id?subject=Mulai%20Proyek%20Baru"
+                        <a href="mailto:contact-us@kayazta.id?subject=Mulai%20Proyek%20Baru"
                             class="hero-gradient text-on-primary px-8 py-4 rounded-lg font-bold text-lg shadow-xl shadow-primary/20 active:scale-95 transition-all">
                             Mulai Proyek Anda
                         </a>
@@ -213,7 +215,8 @@
                         <span class="material-symbols-outlined text-3xl">automation</span>
                     </div>
                     <h4 class="text-xl font-bold mb-3">AI Integrator</h4>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Mengotomatisasi proses bisnis untuk meningkatkan efisiensi dan mengurangi kesalahan manusia.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Mengotomatisasi proses bisnis untuk
+                        meningkatkan efisiensi dan mengurangi kesalahan manusia.</p>
                 </div>
             </div>
         </section>
@@ -291,7 +294,8 @@
                                 </div>
                             </div>
                             <div class="w-full lg:w-1/2 space-y-6">
-                                <div class="text-primary font-bold tracking-widest uppercase">Case Study: alchemistfragrance.com</div>
+                                <div class="text-primary font-bold tracking-widest uppercase">Case Study:
+                                    alchemistfragrance.com</div>
                                 <h3 class="text-4xl font-black text-on-surface">Lepas dari Shopify, Hemat 30%.</h3>
                                 <p class="text-lg text-on-surface-variant italic">"Shopify tidak lagi bisa mengikuti
                                     alur bisnis kami yang terus berkembang. Kayazta memindahkan Alchemist ke platform
@@ -308,10 +312,11 @@
                             <div class="w-full lg:w-1/2">
                                 <img class="rounded-2xl w-full aspect-video object-cover"
                                     data-alt="modern fintech dashboard on laptop screen with clean interface and data visualizations"
-                                    src="images/firstmedia/work-fm.webp"/>
+                                    src="images/firstmedia/work-fm.webp" />
                             </div>
                             <div class="w-full lg:w-1/2 space-y-6">
-                                <div class="text-primary font-bold tracking-widest uppercase">Case Study: firstmedia.com</div>
+                                <div class="text-primary font-bold tracking-widest uppercase">Case Study: firstmedia.com
+                                </div>
                                 <h3 class="text-4xl font-black text-on-surface">Melanjutkan Revamp firstmedia.com</h3>
                                 <p class="text-lg text-on-surface-variant">Kayazta bergabung ke dalam tim development
                                     First Media untuk melanjutkan proyek revamp website firstmedia.com, mendukung fase
@@ -425,7 +430,7 @@
                     <p class="text-xl opacity-90 mb-12 max-w-2xl mx-auto">Mari berdiskusi bagaimana teknologi kami dapat
                         membantu bisnis Anda mencapai level berikutnya.</p>
                     <div class="flex flex-col sm:flex-row justify-center gap-6">
-                        <a href="mailto:contactus@kayazta.id?subject=Jadwalkan%20Konsultasi%20Gratis"
+                        <a href="mailto:contact-us@kayazta.id?subject=Jadwalkan%20Konsultasi%20Gratis"
                             class="bg-surface-container-lowest text-primary px-10 py-5 rounded-xl font-black text-xl hover:scale-105 transition-transform">
                             Jadwalkan Konsultasi Gratis
                         </a>
@@ -461,38 +466,38 @@
         </div>
     </footer>
     <script>
-        (function () {
-            const track = document.getElementById('case-carousel');
-            if (!track) return;
-            const slides = track.children;
-            const dotsWrap = document.getElementById('case-carousel-dots');
-            const prev = document.querySelector('[data-carousel-prev]');
-            const next = document.querySelector('[data-carousel-next]');
-            const dots = [];
-            for (let i = 0; i < slides.length; i++) {
-                const d = document.createElement('button');
-                d.type = 'button';
-                d.className = 'w-2.5 h-2.5 rounded-full bg-outline-variant transition';
-                d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-                d.addEventListener('click', () => slides[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' }));
-                dotsWrap.appendChild(d);
-                dots.push(d);
-            }
-            const setActive = (i) => dots.forEach((d, idx) => d.classList.toggle('bg-primary', idx === i) || d.classList.toggle('bg-outline-variant', idx !== i));
-            const go = (dir) => {
-                const w = track.clientWidth;
-                const i = Math.round(track.scrollLeft / w);
-                const target = Math.max(0, Math.min(slides.length - 1, i + dir));
-                slides[target].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-            };
-            prev.addEventListener('click', () => go(-1));
-            next.addEventListener('click', () => go(1));
-            track.addEventListener('scroll', () => {
-                const i = Math.round(track.scrollLeft / track.clientWidth);
-                setActive(i);
-            });
-            setActive(0);
-        })();
+            (function () {
+                const track = document.getElementById('case-carousel');
+                if (!track) return;
+                const slides = track.children;
+                const dotsWrap = document.getElementById('case-carousel-dots');
+                const prev = document.querySelector('[data-carousel-prev]');
+                const next = document.querySelector('[data-carousel-next]');
+                const dots = [];
+                for (let i = 0; i < slides.length; i++) {
+                    const d = document.createElement('button');
+                    d.type = 'button';
+                    d.className = 'w-2.5 h-2.5 rounded-full bg-outline-variant transition';
+                    d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                    d.addEventListener('click', () => slides[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' }));
+                    dotsWrap.appendChild(d);
+                    dots.push(d);
+                }
+                const setActive = (i) => dots.forEach((d, idx) => d.classList.toggle('bg-primary', idx === i) || d.classList.toggle('bg-outline-variant', idx !== i));
+                const go = (dir) => {
+                    const w = track.clientWidth;
+                    const i = Math.round(track.scrollLeft / w);
+                    const target = Math.max(0, Math.min(slides.length - 1, i + dir));
+                    slides[target].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                };
+                prev.addEventListener('click', () => go(-1));
+                next.addEventListener('click', () => go(1));
+                track.addEventListener('scroll', () => {
+                    const i = Math.round(track.scrollLeft / track.clientWidth);
+                    setActive(i);
+                });
+                setActive(0);
+            })();
 
         (function () {
             const track = document.getElementById('alchemist-image-carousel');
